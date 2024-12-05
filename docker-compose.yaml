@@ -1,0 +1,10 @@
+version: '27.3.1'
+
+services:
+  zkpserver:
+    build: .
+    volumes:
+      - ./:/zkpserver
+    environment:
+      - USER=Darek
+    container_name: zkpserver

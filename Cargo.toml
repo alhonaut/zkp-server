@@ -1,0 +1,25 @@
+[package]
+edition = "2021"
+name = "zkp-chaum-pederson"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hex = "0.4.3"
+num-bigint = {version = "0.4.6", features = ["rand"]}
+prost = "0.13.3"
+rand = "0.8.5"
+tokio = {version = "1.41.1", features = ["rt-multi-thread"]}
+tonic = "0.12.3"
+
+[build-dependencies]
+tonic-build = "0.12.3"
+
+[[bin]]
+name = "server"
+path = "./src/server.rs"
+
+[[bin]]
+name = "client"
+path = "./src/client.rs"
